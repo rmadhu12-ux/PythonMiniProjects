@@ -129,3 +129,10 @@ error: argument --user-id: invalid int value: 'abc'
 ## Tech
 
 Python, httpx, Pydantic v2, argparse, logging
+
+## Testing
+
+python -m pip install -r requirements-dev.txt
+python -m pytest -v
+
+Tests never call the real API. They use httpx.MockTransport for a fake server and patch time.sleep, so the whole suite runs in under a second.
