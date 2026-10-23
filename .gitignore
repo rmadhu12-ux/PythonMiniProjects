@@ -1,4 +1,7 @@
+venv/
+.venv/
 .env
+data/
 out/
 __pycache__/
-.venv/
+.pytest_cache/
